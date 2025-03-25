@@ -1,0 +1,394 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <title>Northwest Arkansas Trail Homes</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="screen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="handpicks.js"></script>
+
+
+<link rel="stylesheet" href="mailerlite.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVDBM63ENL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NVDBM63ENL');
+</script>
+
+</head>
+
+<body>
+
+    <header class="limit">
+        <a id="site-logo" href="index.html"><img src="assets/trail-homes-logo.svg" /></a>
+        <div id="navigation">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blogs</a>
+            <!--<a href="handpicked-trailhomes.html">Trail Homes</a>
+            <a href="all-listings.html">All Listings</a>-->
+        </div>
+    </header>
+
+    <div class="feature limit">
+
+        <section class="property-gallery">
+            <!-- <div class="limit"> -->
+            <div class="gallery-container">
+                <div id="gallery-main">
+                    <img id="main-image" src="" alt="Property Image">
+                    <button id="fullscreen-btn">⛶</button>
+                </div>
+                <div id="property-map" style="display: none; height: 500px;"></div> <!-- Map Container -->
+                <div id="gallery-thumbnails"></div>
+            </div>
+            <!-- </div> -->
+        </section>
+
+
+
+        <section class="property-details">
+            <div class="basic">
+                <h1 id="property-title"></h1>
+                <h2 id="property-price"></h2>
+                <p class="label"><strong>Bedrooms:</strong> <span class="bold" id="property-bed"></span></p>
+                <p class="label"><strong>Bathrooms:</strong> <span class="bold" id="property-bath"></span></p>
+                <p class="label"><strong>Size:</strong> <span class="bold" id="property-size"></span></p>
+                <p class="label"><strong>Acreage:</strong> <span class="bold" id="property-acreage"></span></p>
+                <p class="label"><strong>Nearby trail:</strong> <span class="bold" id="trail-name"></span><span id="trail-distance"></span></p>
+                <p class="label"><strong>Listed by:</strong> <span id="property-listing"></span></p>
+                <p class="label"><strong>Description:</strong> <span id="property-description"></span></p>
+            </div>
+
+            <div class="contact-details">
+                <img class="headshot" src="assets/Jenna.jpg" />
+                <div class="info">
+                    <p class="name">Jenna Gragg</p>
+                    <p class="phone">Call or Text: (412)708-0303</p>
+                    <p class="broker">No Place Like Home Realty Co</p>
+                    <a class="email" href="mailto:jenna@back40trailhomes.com">Email Jenna</a>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+    </div>
+
+
+
+    <section class="introduction">
+        <div class="limit intro-content">
+            <div class="newsletter">
+                <h3>Best. Decision. Ever.</h3>
+                <p>My name is Jenna Gragg, and my family and I relocated to Bella Vista to for the incredible bike
+                    trails. Now, I specialize in helping fellow cyclists find their ideal homes with direct trail
+                    access. If you're looking for the perfect home on the trails, I'd love to help—let's connect!</p>
+                <p>Keep up with the latest real estate development news and handpicked trail homes in Bella Vista, AR
+                </p>
+
+              
+              
+                <div id="mlb2-22915723" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-22915723">
+                    <div class="ml-form-align-left ">
+                      <div class="ml-form-embedWrapper embedForm">
+              
+                       
+                       
+              
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              
+                          <div class="ml-form-embedContent" style="margin-bottom: 0px; ">
+                           
+                          </div>
+              
+                          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1344816/forms/146887550132291083/subscribe" data-code="" method="post" target="_blank">
+                            <div class="ml-form-formContent">
+                             
+              
+                               
+                                <div class="ml-form-fieldRow ml-last-item">
+                                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+              
+                                   
+              
+              
+                                    <!-- input -->
+                                    <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                                    <!-- /input -->
+              
+                                    <!-- textarea -->
+                                   
+                                    <!-- /textarea -->
+              
+                                    <!-- select -->
+                                   
+                                    <!-- /select -->
+              
+                                    <!-- checkboxes -->
+                         
+                          <!-- /checkboxes -->
+              
+                                    <!-- radio -->
+                                   
+                                    <!-- /radio -->
+              
+                                    <!-- countries -->
+                                   
+                                    <!-- /countries -->
+              
+              
+              
+              
+              
+                                  </div>
+                                </div>
+                             
+                            </div>
+              
+                           
+              
+                            <!-- Privacy policy -->
+                           
+                            <!-- /Privacy policy -->
+              
+      
+              
+                           
+                            <input type="hidden" name="ml-submit" value="1">
+              
+                            <div class="ml-form-embedSubmit">
+                             
+                                <button type="submit" class="primary">Subscribe</button>
+                             
+                              <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                <div class="ml-form-embedSubmitLoad"></div>
+                                <span class="sr-only">Loading...</span>
+                              </button>
+                            </div>
+              
+                           
+                            <input type="hidden" name="anticsrf" value="true">
+                          </form>
+                        </div>
+              
+                        <div class="ml-form-successBody row-success" style="display: none">
+              
+                          <div class="ml-form-successContent">
+                           
+                              <h4>Thank you!</h4>
+                             
+                                <p>You have successfully joined our subscriber list.</p>
+                             
+                           
+                          </div>
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+            </div>
+            <img class="nl-image" src="assets/Back40.jpg" />
+        </div>
+    </section>
+
+    <footer>
+        <div class="limit footer-content">
+
+
+            <div class="contact-info">
+                <img src="assets/trail-homes-logo-white.svg" />
+                <div class="name">Jenna Gragg</div>
+                <ul class="details">
+                    <li> AR Real Estate  License #AR 97513</li>
+                    <li>Call or Text Direct: 412-708-0303</li>
+                    <li>Email: jenna@back40trailhomes.com</li>
+                </ul>
+                <ul class="broker">
+                    <li>No Place Like Home Realty Co.</li>
+                    <li> Principal Broker Sandra Wellesley, Lic #AR 87022</li>
+                    <li> 1801 Forest Hills Blvd #119 Bella Vista, AR 72715</li>
+                    <li> Bella Vista, AR, USA</li>
+                    <li>Office Phone: 479-208-7153</li>
+                </ul>
+            </div>
+
+            <img class="broker-logo" src="assets/no-place-like-home.png" />
+
+        </div>
+
+
+    </footer>
+
+    <script>
+
+$(document).ready(async function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const propertyId = urlParams.get("id"); // Get property ID from URL
+
+    let property = JSON.parse(localStorage.getItem("selectedProperty"));
+
+    if (!property && propertyId) {
+        // ✅ Fetch from Airtable if no `localStorage` data
+        property = await fetchPropertyById(propertyId);
+    }
+
+    if (!property) {
+        alert("No property data found!");
+        window.location.href = "index.html";
+        return;
+    }
+
+    // ✅ Populate property details
+    $("#property-title").text(property.Address);
+    $("#property-price").text(property.Price);
+    $("#property-bed").text(property.Beds);
+    $("#property-bath").text(property.Baths);
+    $("#property-size").text(property.Size);
+    $("#property-acreage").text(property.Acreage);
+    $("#property-listing").text(property.ListingAgent);
+    $("#property-description").text(property.Description);
+    $("#trail-name").text(property.Trail + " ");
+    $("#trail-distance").text(property.DistanceToTrail);
+
+    // ✅ Handle image gallery
+    let thumbnailsHTML = "";
+    property.images.forEach((image, index) => {
+        thumbnailsHTML += `<img class="thumbnail lazy-load" src="low-res-placeholder.jpg" data-src="${image}" data-index="${index}">`;
+    });
+    thumbnailsHTML += `<div class="thumbnail map-thumbnail" data-type="map">View on Map</div>`;
+
+    $("#gallery-thumbnails").html(thumbnailsHTML);
+    $("#main-image").attr("src", property.images[0]); // Set first image as default
+
+    // ✅ Lazy load images
+    $(".lazy-load").each(function () {
+        const imgElement = $(this);
+        const highResSrc = imgElement.data("src");
+        const tempImg = new Image();
+        tempImg.src = highResSrc;
+        tempImg.onload = () => imgElement.attr("src", highResSrc);
+    });
+
+    $(".lazy-load").each(function () {
+    const imgElement = $(this);
+    const highResSrc = imgElement.data("src");
+    imgElement.attr("src", highResSrc);
+});
+
+    // ✅ Handle thumbnail clicks
+    $(".thumbnail").on("click", function () {
+        const type = $(this).data("type");
+        if (type === "map") {
+            $("#main-image").hide();
+            $("#property-map").show();
+            loadMap(property.Latitude, property.Longitude);
+        } else {
+            const index = $(this).data("index");
+            $("#main-image").attr("src", property.images[index]);
+            $("#main-image").show();
+            $("#property-map").hide();
+        }
+    });
+
+    // ✅ Enable full-screen mode for images
+    $("#fullscreen-btn").on("click", function () {
+        const imageElement = document.getElementById("main-image");
+        if (imageElement.requestFullscreen) {
+            imageElement.requestFullscreen();
+        }
+    });
+
+    // ✅ Load Map Function
+    function loadMap(lat, lng) {
+        if ($("#property-map").html().trim() === "") { 
+            const map = L.map("property-map").setView([lat, lng], 16);
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<strong>${property.Address}</strong><br>${property.Price}`)
+                .openPopup();
+        }
+    }
+
+    // ✅ ML-Block Form Handling (MailerLite Integration)
+    $(".ml-block-form").submit(function (post) {
+        post.prpostDefault(); // Prpost page reload
+
+        var form = $(this);
+        var actionUrl = form.attr("action");
+
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(),
+            dataType: "jsonp",
+            success: function () {
+                console.log("Success: Form submitted to MailerLite"); // Debugging
+                $(".ml-form-embedBody").hide(); // Hide the form
+                $(".ml-form-successBody").show(); // Show success message
+            },
+            error: function (error) {
+                console.error("MailerLite form submission failed:", error);
+            }
+        });
+    });
+});
+
+// ✅ Function to fetch property from Airtable using the ID
+async function fetchPropertyById(propertyId) {
+    try {
+        const response = await fetch("https://api.airtable.com/v0/appXx1O0gCdtRVQ3h/Properties", {
+            headers: { "Authorization": "Bearer YOUR_PERSONAL_ACCESS_TOKEN" }
+        });
+
+        const data = await response.json();
+        const property = data.records.map(record => record.fields).find(prop => prop.ID === propertyId);
+        
+        return property || null;
+    } catch (error) {
+        console.error("Error fetching property:", error);
+        return null;
+    }
+}
+
+
+
+    </script>
+
+
+    <!--mailerlite includes-->
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+        <script>
+            fetch("https://assets.mailerlite.com/jsonp/1344816/forms/146887550132291083/takel")
+        </script>
+
+
+
+</body>
+
+</html>
