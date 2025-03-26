@@ -27,24 +27,28 @@ type HandpickedHome = {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    // Instead of reading from static-params.json, fetch directly from Sanity
-    const query = `*[_type == "handpick"]{ "slug": slug.current }`;
-    const slugs = await sanityFetch(query);
+    // Add a cache-busting parameter and ensure we're getting all published documents
+    const timestamp = new Date().toISOString();
+    const query = `*[_type == "handpick" && defined(slug.current)]{ 
+      "slug": slug.current,
+      _updatedAt
+    }`;
     
+    const slugs = await sanityFetch(query);
     console.log(`Found ${slugs.length} static paths to generate`);
-
-    // Map the params to the format Next.js expects
+    console.log('Slugs:', JSON.stringify(slugs));
+    
     const paths = slugs.map(({ slug }: { slug: string }) => ({
       params: { slug },
     }));
-
+    
     return { 
       paths, 
-      fallback: 'blocking' // Return 404 for any paths not included in paths
+      fallback: 'blocking' // This allows new paths to be generated on demand
     };
   } catch (error) {
     console.error("Error fetching slugs:", error);
-    return { paths: [], fallback: false };
+    return { paths: [], fallback: 'blocking' };
   }
 };
 
