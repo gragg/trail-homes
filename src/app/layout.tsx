@@ -1,8 +1,6 @@
 export const dynamic = "force-static";
 
 import type { Metadata } from "next";
-import "./globals.css";
-//import { SanityLive } from "@/sanity/live";
 
 
 export const metadata: Metadata = {
@@ -18,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="stylesheet" href="/globals.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
