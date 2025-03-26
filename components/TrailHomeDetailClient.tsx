@@ -2,8 +2,8 @@ export const dynamic = "force-static";
 
 import Image from 'next/image'
 import Link from 'next/link'
-import MailerLiteForm from '@/components/MailerLiteForm'
-import PropertyGallery from '@/components/PropertyGallery'
+import MailerLiteForm from './MailerLiteForm'
+import PropertyGallery from './PropertyGallery'
 
 type GalleryImage = { url: string }
 
@@ -125,7 +125,7 @@ export default function TrailHomeDetailClient({ home }: { home: HandpickedHome }
               <li>Office Phone: 479-208-7153</li>
             </ul>
           </div>
-          <img className="broker-logo" src="/no-place-like-home.png" />
+          <img className="broker-logo" src="/no-place-like-home.png" alt="No Place Like Home Realty"/>
         </div>
       </footer>
     </main>

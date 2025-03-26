@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "generate": "node scripts/generate-static-routes.cjs",
-    "prebuild": "npm run generate",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

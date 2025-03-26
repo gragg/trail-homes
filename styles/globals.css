@@ -313,7 +313,7 @@ button.contact {
 }
 
 .hero {
-    background: url('/hero-background-2.jpg') center / cover no-repeat;
+    /* background: url('/images/hero-background-2.jpg') center / cover no-repeat; */
     height: 50vh;
     display: flex;
     align-items: center;
