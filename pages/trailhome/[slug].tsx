@@ -40,7 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return { 
       paths, 
-      fallback: false // Return 404 for any paths not included in paths
+      fallback: 'blocking' // Return 404 for any paths not included in paths
     };
   } catch (error) {
     console.error("Error fetching slugs:", error);
@@ -86,13 +86,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       const home = await sanityFetch(query);
 
       if (!home) {
-        console.warn(`No data found for slug: ${slug}, using fallback home data`);
-        return {
-          props: { 
-            home: fallbackHome,
-            slug
-          }
-        };
+        return { notFound: true };
       }
 
       // Return the home data as props
